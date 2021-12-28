@@ -1,103 +1,144 @@
-/*## This is CSS file"*/
+/*=========================HOME=========================*/
+:root{
+  --header-height: ;
 
-:root {
-  --font-family-primary: 'Poppins', serif;
-  --font-family-secondary: 'PT Sans', sans-serif;
-  --font-size-title: 20px;
-  --line-height-title: 1.4;
-  --font-size-caption: 11px;
-  --line-height-caption: 1.2;
-  --color-text: #222022;
-  --color-highlight-primary: #ceff7e;
-  --color-highlight-secondary: #a8dab4;
-  --border-radius-primary: 32px;
+  /*==== Colors ====*/
+  /*Favorite color*/
+  --hue-color:250;
+
+  /*HSL color mode*/
+  --first-color: hsl(var(--hue-color),69%,61%);
+  --first-color-second: hsl(var(--hue-color),69%,61%);
+  --first-color-alt: hsl(var(--hue-color),57%,53%);
+  --first-color-lighter: hsl(var(--hue-color),92%,85%);
+  --title-color: hsl(var(--hue-color),8%,15%);
+  --text-color: hsl(var(--hue-color),8%,45%);
+  --text-color-light: hsl(var(--hue-color),8%,65%);
+  --input-color-light: hsl(var(--hue-color),70%,61%);
+  --body-color: hsl(var(--hue-color),60%,99%);
+  --container-color: #FFF;
+
+  /*==== Font ====*/
+  --body-font: 'Poppins',sans-serif ;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*Font weight*/
+  --font-medium : 500;
+  --font-semi-bold : 600;
+
+  /*==== Margin ====*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px, ... */
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*==== z index ====*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
 }
 
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.list-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: auto; /*100vw;*/
-  height: auto; /*100vh;*/
-  padding: 5px;
-  margin: 5px;
-}
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (min-width: 1200px) {
-  .list-card {
-    flex-direction: row;
- }
+@media screen and (min-width:968px) {
+  :root{
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
 }
 
 
-.card {
-  max-width: 460px;
-  max-height: 260px;
-  border-radius: var(--border-radius-primary);
-  box-shadow: 24px 24px 80px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+/*=========================HOME=========================*/
+*{
   box-sizing: border-box;
-  margin: 20px;
-  display: flex;
-  align-items: center;
-  /*flex-direction: column;*/
-}
-@media (min-width: 1200px) {
-  .card {
-    flex-direction: row;
-    align-items: center;
-    margin: 40px;
-    padding: 25px;
- }
+  padding: 0;
+  margin: 0;
 }
 
-.card__image {
-  width: 40%;
-  max-height: none;
-  border-radius: var(--border-radius-primary);
-  object-fit: cover;
+html{
+  scroll-behavior: smooth;
 }
 
-.card__content {
-  width: 60%;
-  padding-left: 30px;
+body{
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
 }
 
-.card__date {
+h1,h2,h3,h4{
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/*=========================REUSABLE CSS CLASSES=========================*/
+.section{
+  padding: 2rem 0 4rem;
+}
+
+.section__title{
+  font-size: var(--h1-font-size);
+}
+
+.section__subtitle{
   display: block;
-  font-family: var(--font-family-secondary);
-  font-size: var(--font-size-caption);
-  line-height: var(--line-height-caption);
-  text-transform: uppercase;
-  color: var(--color-text);
-  margin-bottom: 8px;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
 }
 
+.section__title, .section__subtitle{
+  text-align: center;
+}
 
-.card__title {
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-title);
-  line-height: var(--line-height-title);
-  color: var(--color-text);
-  box-decoration-break: clone;
-  background-image: linear-gradient(90deg, var(--color-highlight-primary), var(--color-highlight-secondary));
-  background-size: 100% 42%;
-  background-repeat: no-repeat;
-  background-position: 0 85%;
-  padding: 0 4px;
-  margin-left: -4px;
+/*=========================LAYOUT=========================*/
+.container{
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
 }
-#card-2 .card__title {
-  --color-highlight-primary: #aad0fc;
-  --color-highlight-secondary: #a2b1da;
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-title);
-  line-height: var(--line-height-title);
-  color: var(--color-text);
+
+.grid{
+  display: grid;
+  gap: 1.5rem;
 }
+
+header{
+  width: 100%;
+  position: fixed; /*stays in the same place even if the page is scrolled*/
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+/*=========================NAV=========================*/
