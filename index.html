@@ -15,32 +15,32 @@
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list grid">
           <li class="nav__item">
-            <a href="#home" class="nav__link">
+            <a href="#home" class="nav__link active-link">
               <i class="uil uil-estate nav__icon"></i> Home
             </a>
           </li>
           <li class="nav__item">
-            <a href="#about" class="nav__link">
+            <a href="#about" class="nav__link active-link">
               <i class="uil uil-user nav__icon"></i> About
             </a>
           </li>
           <li class="nav__item">
-            <a href="#skills" class="nav__link">
+            <a href="#skills" class="nav__link active-link">
               <i class="uil uil-file-alt nav__icon"></i> Skills
             </a>
           </li>
           <li class="nav__item">
-            <a href="#services" class="nav__link">
+            <a href="#services" class="nav__link active-link">
               <i class="uil uil-briefcase-alt nav__icon"></i> Services
             </a>
           </li>
           <li class="nav__item">
-            <a href="#portfolio" class="nav__link">
+            <a href="#portfolio" class="nav__link active-link">
               <i class="uil uil-scenery nav__icon"></i> Portfolio
             </a>
           </li>
           <li class="nav__item">
-            <a href="#contact" class="nav__link">
+            <a href="#contact" class="nav__link active-link">
               <i class="uil uil-message nav__icon"></i> Contactme
             </a>
           </li>
@@ -150,10 +150,127 @@
       </div>
     </section>
 
-    <!--Contact/Footer/Menu change color/header dark box/Darklight theme/Scroll bar/media Queries...-->
-    <!--Separe Element for Github repo-->
+    <!--=========================CONTACTME=========================-->
+    <section class="concact session" id="contact">
+      <h2 class="section__title">Contact Me</h2>
+      <span class="section__subtitle">Get in touch</span>
+
+      <div class="contact__container container grid">
+        <div class="contact__information">
+          <i class="uil uil-phone contact__icon"></i>
+          <div>
+            <h3 class="contact__title">Call Me</h3>
+            <span class="contact__subtitle">999-77-666</span>
+          </div>
+        </div>
+
+        <div class="contact__information">
+          <i class="uil uil-envelope contact__icon"></i>
+          <div>
+            <h3 class="contact__title">Email</h3>
+            <span class="contact__subtitle">frd.antoine(at)xxx.fr</span>
+          </div>
+        </div>
+
+        <div class="contact__information">
+          <i class="uil uil-map-marker contact__icon"></i>
+          <div>
+            <h3 class="contact__title">Location</h3>
+            <span class="contact__subtitle">France - Paris ...</span>
+          </div>
+        </div>
+
+        <form action="" class="contact__form grid">
+          <div class="contact__inputs grid">
+            <div class="contact__content">
+              <label for="" class="contact__label">Name</label>
+              <input type="text" class="contact__input">
+            </div>
+            <div class="contact__content">
+              <label for="" class="contact__label">Email</label>
+              <input type="email" class="contact__input">
+            </div>
+          </div>
+          <div class="contact__content">
+            <label for="" class="contact__label">Project</label>
+            <input type="text" class="contact__input">
+          </div>
+          <div class="contact__content">
+            <label for="" class="contact__label">Message</label>
+            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+          </div>
+
+          <div>
+            <a href="#" class="button button--flex">
+              Send Message
+              <i class="uil uil-message button__icon"></i>
+            </a>
+          </div>
+        </form>
+      </div>
+
+    </section>
+
   </main>
+
+  <!--=========================FOOTER=========================-->
+  <footer class="footer">
+    <div class="footer__bg">
+      <div class="footer__container container grid">
+        <!--Title-->
+        <div> 
+          <h1 class="footer__title">Antoine</h1>
+          <span class="footer__subtitle">Data scientist</span>
+        </div>
+
+        <!--Links-->
+        <ul class="footer__links"> 
+          <li>
+            <a href="#home" class="footer__link">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="footer__link">About</a>
+          </li>
+          <li>
+            <a href="#contact" class="footer__link">Contactme</a>
+          </li>
+        </ul>
+
+        <!--Socials-->
+        <div class="footer__socials"> 
+          <a href="#" target="_blank" class="footer__social">
+            <i class="uil uil-facebook-f"></i>
+          </a>
+          <a href="#" target="_blank" class="footer__social">
+            <i class="uil uil-instagram"></i>
+          </a>
+          <a href="#" target="_blank" class="footer__social">
+            <i class="uil uil-twitter-alt"></i>
+          </a>
+        </div>
+
+        <!--Copyrights-->
+        <p class="footer__copy">Made with 💙 by Antoine Frd - &#169; Ant Frd. All right reserved</p> 
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+    <!--Darklight theme x
+        Scroll bar Dark Theme x
+        Media Queries... 
+    -->
+    <!--Separe Element for Github repo-->
+  <!--=========================MAIN JS=========================-->
   <script src="main.js"></script>
+
+
+
 </body>
 </html>
 
